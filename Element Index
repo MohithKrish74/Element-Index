@@ -1,0 +1,43 @@
+package com.company;
+
+import com.sun.jdi.Value;
+import org.w3c.dom.ls.LSOutput;
+
+import java.security.spec.RSAOtherPrimeInfo;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int size = in.nextInt();
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        System.out.println("Enter the elements ");
+        for (int i = 0; i < size; i++) {
+            list.add(in.nextInt());
+        }
+        System.out.println("User list is " + list);
+        System.out.print("Enter the element to get the Index: ");
+        int index= in.nextInt();
+        ArrayList<Integer> list1 = new ArrayList<Integer>();
+        System.out.println("The index of the element are ");
+        for(int i=0;i<list.size();i++)
+        {
+            if (list.get(i) == index) {
+                list1.add(i);
+            }
+        }
+        if(list1.size()==0)
+        {
+            System.out.println("No element is found at the index");
+        }
+        else
+        {
+            System.out.println(list1);
+
+    }
+
+
+    }
+
+}
